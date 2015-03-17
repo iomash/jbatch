@@ -1,0 +1,1 @@
+define(["jquery"],function(a){"use strict";return function(b,c){try{c.write(a.parseXML(b[1]))}catch(d){return c.write(d),c.fail}return c.done}});

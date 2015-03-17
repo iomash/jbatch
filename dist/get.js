@@ -1,0 +1,1 @@
+define(["jquery"],function(a){"use strict";return function(b,c){a.ajax({type:"GET",url:b[1],success:function(a){c.write(a),c.done()},error:function(a,b){c.fail(b)}})}});
