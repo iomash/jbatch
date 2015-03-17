@@ -1,5 +1,8 @@
 require.config({
-    skipDataMain: true
+    skipDataMain: true,
+    paths: {
+        jquery: '//cdn.jsdelivr.net/jquery/2.1.3/jquery.min'
+    }
 });
 
 require(['domready', 'jbatchParser'], function(domready, jbatchParser) {
