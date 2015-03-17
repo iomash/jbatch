@@ -17,7 +17,7 @@ Here's an example how you integrate Google Analytics, highlight source code and 
 
 jBatch is a JavaScript library you need to link to. Ideally it's the last JavaScript library you will ever have to link to your webpages.
 
-Copy and paste this <script> tag:
+Copy and paste this `<script>` tag:
 
 ```
 <script src="//jbatch.iomash.com/1/jbatch.min.js"></script>
