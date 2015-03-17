@@ -1,0 +1,1 @@
+define(["jquery"],function(a){"use strict";return function(b,c){var d=a.inArray("--callback",b),e=null;-1!==d&&d+1<b.length&&(e=b[d+1]),a.ajax({type:"GET",url:b[1],dataType:"jsonp",jsonpCallback:e,success:function(a){c.write(a),c.done()},error:function(a,b){c.fail(b)}})}});
