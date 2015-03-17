@@ -1,3 +1,7 @@
+require.config({
+    skipDataMain: true
+});
+
 require(['domready', 'jbatchParser'], function(domready, jbatchParser) {
     'use strict';
     domready(function() {
