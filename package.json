@@ -1,0 +1,8 @@
+{
+  "name": "jbatch",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-requirejs": "^0.4.4",
+    "grunt-jison": "^1.3.2"
+  }
+}
