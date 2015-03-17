@@ -1,0 +1,1 @@
+define(function(){"use strict";return function(a){window.setInterval(function(){a[2](function(){})},parseFloat(a[1],10))}});

@@ -1,0 +1,1 @@
+define(["jquery"],function(a){"use strict";return function(b,c){var d,e=a.inArray("--appendTo",b);return-1!==e&&e+1<b.length&&a(b[e+1]).append('<div id="disqus_thread"></div>'),d=document.createElement("script"),d.async=!0,d.src="//"+b[1]+".disqus.com/embed.js",(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(d),c.done}});

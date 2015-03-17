@@ -1,0 +1,1 @@
+define(["jquery","//cdn.jsdelivr.net/highlight.js/8.4/highlight.min.js"],function(a,b){"use strict";return function(c,d){var e=a.inArray("--style",c),f="default";return-1!==e&&e+1<c.length&&(f=c[e+1]),a(document.head).append('<link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/8.4/styles/'+f+'.min.css">'),a(c[1]).each(function(a,c){b.highlightBlock(c)}),d.done}});

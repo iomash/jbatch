@@ -1,0 +1,1 @@
+define(["jquery"],function(a){"use strict";return function(b,c){return"create"===b[1]&&b.length>2?(a(document.head).append('<script async src="//www.google-analytics.com/analytics.js"></script>'),window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga(b[1],b[2],"auto")):ga.apply(this,b.slice(1)),c.done}});

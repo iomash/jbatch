@@ -1,0 +1,1 @@
+define(function(){"use strict";return function(a,b){return b.write(a.slice(1).join(" ")),b.done}});

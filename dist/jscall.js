@@ -1,0 +1,1 @@
+define(function(){"use strict";return function(a,b){return b.write(window[a[1]](b.read())),b.done}});
