@@ -34,11 +34,20 @@ module.exports = function(grunt) {
                     optimize: 'none'
                 }
             }
+        },
+        uglify: {
+            cmds: {
+                src: 'src/cmd/**/*.js',
+                dest: 'dist',
+                expand: true,
+                flatten: true
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-jison');
     grunt.loadNpmTasks('grunt-contrib-requirejs');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
-    grunt.registerTask('default', ['jison', 'requirejs']);
+    grunt.registerTask('default', ['jison', 'requirejs', 'uglify']);
 };
