@@ -25,7 +25,8 @@ module.exports = function(grunt) {
             },
             minified: {
                 options: {
-                    out: 'dist/jbatch.min.js'
+                    out: 'dist/jbatch.min.js',
+                    preserveLicenseComments: false
                 }
             },
             debug: {
@@ -33,6 +34,20 @@ module.exports = function(grunt) {
                     out: 'dist/jbatch.js',
                     optimize: 'none'
                 }
+            }
+        },
+        file_append: {
+            default_options: {
+                files: [
+                    {
+                        prepend: '/*! jBatch | Copyright 2015 iomash.com | http://jbatch.iomash.com/license */\n\n',
+                        input: 'dist/jbatch.min.js'
+                    },
+                    {
+                        prepend: '/*! jBatch | Copyright 2015 iomash.com | http://jbatch.iomash.com/license */\n\n',
+                        input: 'dist/jbatch.js'
+                    }
+                ]
             }
         },
         uglify: {
@@ -47,7 +62,8 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-jison');
     grunt.loadNpmTasks('grunt-contrib-requirejs');
+    grunt.loadNpmTasks('grunt-file-append');
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
-    grunt.registerTask('default', ['jison', 'requirejs', 'uglify']);
+    grunt.registerTask('default', ['jison', 'requirejs', 'file_append', 'uglify']);
 };
