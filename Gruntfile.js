@@ -40,11 +40,11 @@ module.exports = function(grunt) {
             default_options: {
                 files: [
                     {
-                        prepend: '/*! jBatch | Copyright 2015 iomash.com | http://jbatch.iomash.com/license */\n\n',
+                        prepend: '/*! jBatch | Copyright 2015 iomash.com | http://jbatch.iomash.com/license.txt */\n\n',
                         input: 'dist/jbatch.min.js'
                     },
                     {
-                        prepend: '/*! jBatch | Copyright 2015 iomash.com | http://jbatch.iomash.com/license */\n\n',
+                        prepend: '/*! jBatch | Copyright 2015 iomash.com | http://jbatch.iomash.com/license.txt */\n\n',
                         input: 'dist/jbatch.js'
                     }
                 ]
