@@ -7,7 +7,7 @@ define(['jquery'], function($) {
         }
         dsq = document.createElement('script');
         dsq.async = true;
-        dsq.src = '//' + args[1] + '.disqus.com/embed.js';
+        dsq.src = '//' + args[args.length - 1] + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         return ctx.done;
     };

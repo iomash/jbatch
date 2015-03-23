@@ -11,7 +11,7 @@ define(['jquery'], function($) {
         }
         $.ajax({
             type: type,
-            url: args[1],
+            url: args[args.length - 1],
             data: data,
             success: function(data) {
                 ctx.write(data);
