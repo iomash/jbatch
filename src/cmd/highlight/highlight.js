@@ -6,7 +6,7 @@ define(['jquery', '//cdn.jsdelivr.net/highlight.js/8.4/highlight.min.js'], funct
             style = args[i + 1];
         }
         $(document.head).append('<link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/8.4/styles/' + style + '.min.css">');
-        $(args[1]).each(function(i, block) {
+        $(args[args.length - 1]).each(function(i, block) {
             hljs.highlightBlock(block);
         });
         return ctx.done;
