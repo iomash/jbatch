@@ -9,7 +9,7 @@ Here's an example how you would integrate Google Analytics, highlight source cod
   ga create UA-12345678-1
   ga send pageview
   highlight pre>code
-  disqus myWebsite --appendTo body
+  disqus --appendTo body myWebsite
 </script>
 ```
 
@@ -20,7 +20,7 @@ jBatch is a JavaScript library you need to link to. Ideally it's the last JavaSc
 Copy and paste this `<script>` tag (to `<head>` or `<body>` - whatever you prefer):
 
 ```
-<script src="//jbatch.iomash.com/1/jbatch.min.js"></script>
+<script src="//jbatch.iomash.com/1/jbatch.min.js" async></script>
 ```
 
 You may want to replace the number in the URL with a greater number as there are new versions released from time to time. Have a look at http://iomash.com/ to find out everything about the latest jBatch version.
@@ -39,11 +39,11 @@ Use a new line for every command - unless you want to concatenate commands like 
 
 The vertical bar (`|`) is used to forward the output of a command as input to another command. Here the output of `echo` - which is "Hello, world!" - is forwarded as input to `log`. This makes `log` write "Hello, world!" to your browser's console window.
 
-jBatch loads commands automatically. However, you can also use fully-qualified names (URLs) to refer to commands. Just make sure you don't add the file extension ".js":
+jBatch loads commands automatically. However, you can also use fully-qualified names (URLs) to refer to commands:
 
 ```
 <script type="text/jbatch">
-  http://jbatch.iomash.com/1/cmd/echo Hello, world! | http://jbatch.iomash.com/1/cmd/log
+  http://jbatch.iomash.com/1/echo.js Hello, world! | http://jbatch.iomash.com/1/log.js
 </script>
 ```
 
@@ -51,7 +51,7 @@ This allows you to invoke commands which aren't part of jBatch - for example com
 
 ```
 <script type="text/jbatch">
-  http://example.com/myOwnCommand
+  http://example.com/myOwnCommand.js
 </script>
 ```
 
