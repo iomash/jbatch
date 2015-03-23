@@ -3712,6 +3712,7 @@ return parser;
 });
 require.config({
     skipDataMain: true,
+    baseUrl: '//jbatch.iomash.com/1/',
     paths: {
         jquery: '//cdn.jsdelivr.net/jquery/2.1.3/jquery.min'
     }
