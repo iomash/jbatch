@@ -1,0 +1,1 @@
+define(["jquery","jbatchParser"],function(a,b){"use strict";return function(c,d){a.ajax({type:"GET",url:c[1],success:function(a){b.exec(a).then(function(a){a.forEach(d.write),d.done()},d.fail)},error:function(a,b){d.fail(b)}})}});

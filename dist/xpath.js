@@ -1,0 +1,1 @@
+define(function(){"use strict";return function(a,b){for(var c,d=document.evaluate(a[1],b.read(),null,XPathResult.ANY_TYPE,null);c=d.iterateNext();)b.write(c);return b.done}});

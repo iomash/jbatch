@@ -1,0 +1,1 @@
+define(["//cdn.jsdelivr.net/jsonmask/0.3.4/jsonMask.min.js"],function(a){"use strict";return function(b,c){return c.write(a(c.read(),b[1])),c.done}});

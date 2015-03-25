@@ -1,0 +1,1 @@
+define(function(){"use strict";return function(a,b){var c=b.read();return c.controls="controls",b.write(c),b.done}});

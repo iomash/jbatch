@@ -1,0 +1,1 @@
+define(function(){"use strict";return function(a,b){var c=new XMLSerializer;return b.write(c.serializeToString(b.read())),b.done}});

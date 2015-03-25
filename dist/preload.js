@@ -1,0 +1,1 @@
+define(["require"],function(a){"use strict";return function(b,c){a(b.slice(1),function(){c.done()},function(){c.fail()})}});

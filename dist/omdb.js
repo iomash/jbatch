@@ -1,0 +1,1 @@
+define(["jquery"],function(a){"use strict";return function(b,c){a.getJSON("http://www.omdbapi.com/",{t:b[1]},function(a){"True"===a.Response?(c.write(a),c.done()):c.fail(a.Error)}).fail(function(a,b){c.fail(b)})}});

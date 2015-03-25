@@ -1,0 +1,1 @@
+define(function(){"use strict";return function(a,b){return b.write(b.read().match(new RegExp(a[1]))),b.done}});

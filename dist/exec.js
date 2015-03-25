@@ -1,0 +1,1 @@
+define(["jbatchParser"],function(a){"use strict";return function(b,c){a.exec(b.slice(1).join(" ")).then(function(a){a.forEach(c.write),c.done()},c.fail)}});

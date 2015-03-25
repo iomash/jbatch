@@ -1,0 +1,1 @@
+define(function(){"use strict";return function(a,b){var c=document.createElement("audio");return c.src=a[1],b.write(c),b.done}});

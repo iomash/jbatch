@@ -1,0 +1,1 @@
+define(["jquery"],function(a){"use strict";return function(b,c){a.ajax({type:"GET",url:"https://gdata.youtube.com/feeds/api/videos",data:{v:2,alt:"jsonc",format:5,q:b[1],"max-results":1},success:function(a){c.write(a),c.done()},error:function(a,b){c.fail(b)}})}});
