@@ -1,14 +1,17 @@
-define(['jquery'], function($) {
+define(function() {
     'use strict';
     return function(args, ctx) {
-        var i = $.inArray('--appendTo', args), dsq;
-        if (i !== -1 && i + 1 < args.length) {
-            $(args[i + 1]).append('<div id="disqus_thread"></div>');
+        var div, disqus = document.getElementById('disqus-js');
+        if (!disqus) {
+            disqus = document.createElement('script');
+            disqus.id = 'disqus-js';
+            disqus.async = true;
+            disqus.src = '//' + args[args.length - 1] + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(disqus);
         }
-        dsq = document.createElement('script');
-        dsq.async = true;
-        dsq.src = '//' + args[args.length - 1] + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        div = document.createElement('div');
+        div.id = 'disqus_thread';
+        ctx.write(div);
         return ctx.done;
     };
 });
