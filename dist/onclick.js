@@ -1,1 +1,1 @@
-define(["jquery"],function(a){"use strict";return function(b,c){return a(b[1]).click(function(){b[2](function(){},function(){})}),c.done}});
+define(["jquery"],function(a){"use strict";return function(b,c){return a(b[1]).click(function(a){return b[2](function(){},function(){}),"A"!==a.target.tagName||a.target.getAttribute("href")?void 0:!1}),c.done}});
