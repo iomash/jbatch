@@ -2,7 +2,14 @@ require.config({
     skipDataMain: true,
     baseUrl: '//jbatch.iomash.com/1/',
     paths: {
-        jquery: '//cdn.jsdelivr.net/jquery/2.1.3/jquery.min'
+        jquery: '//cdn.jsdelivr.net/jquery/2.1.3/jquery.min',
+        highcharts: '//cdn.jsdelivr.net/highcharts/4.1.4/highcharts'
+    },
+    shim: {
+        highcharts: {
+            deps: ['jquery'],
+            exports: 'Highcharts'
+        }
     }
 });
 
