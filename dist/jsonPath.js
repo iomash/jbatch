@@ -1,0 +1,1 @@
+define(["lib/jsonPath"],function(a){"use strict";return function(b,c){return c.write(a({},c.read(),b[1])),c.done}});
