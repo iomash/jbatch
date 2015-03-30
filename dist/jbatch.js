@@ -2124,7 +2124,7 @@ var requirejs, require, define;
  */
 
 (function() {
-    
+
 
     function $$utils$$objectOrFunction(x) {
       return typeof x === 'function' || (typeof x === 'object' && x !== null);
@@ -3102,7 +3102,7 @@ case 8:
 this.$ = createPipe($$[$0-1].concat([$$[$0]]));
 break;
 case 11:
- this.$ = createBatch($$[$0-1] ? $$[$0-2].concat([$$[$0-1]]) : $$[$0-2]); if (typeof $$[$0] !== 'undefined') return this.$; 
+ this.$ = createBatch($$[$0-1] ? $$[$0-2].concat([$$[$0-1]]) : $$[$0-2]); if (typeof $$[$0] !== 'undefined') return this.$;
 break;
 case 12: case 16: case 20:
 this.$ = [];
@@ -3678,27 +3678,27 @@ options: {},
 performAction: function anonymous(yy,yy_,$avoiding_name_collisions,YY_START) {
 var YYSTATE=YY_START;
 switch($avoiding_name_collisions) {
-case 0: /* skip whitespace */ 
+case 0: /* skip whitespace */
 break;
-case 1: return 4; 
+case 1: return 4;
 break;
-case 2: return 23; 
+case 2: return 23;
 break;
-case 3: return 25; 
+case 3: return 25;
 break;
-case 4: return 22; 
+case 4: return 22;
 break;
-case 5: return 8; 
+case 5: return 8;
 break;
-case 6: return 10; 
+case 6: return 10;
 break;
-case 7: return 11; 
+case 7: return 11;
 break;
-case 8: return 13; 
+case 8: return 13;
 break;
-case 9: yy_.yytext = yy_.yytext.substr(1, yy_.yytext.length - 2).replace(/\\'/g, '\''); return 5; 
+case 9: yy_.yytext = yy_.yytext.substr(1, yy_.yytext.length - 2).replace(/\\'/g, '\''); return 5;
 break;
-case 10: yy_.yytext = yy_.yytext.substr(1, yy_.yytext.length - 2).replace(/\\"/g, '"'); return 6; 
+case 10: yy_.yytext = yy_.yytext.substr(1, yy_.yytext.length - 2).replace(/\\"/g, '"'); return 6;
 break;
 }
 },
@@ -3714,12 +3714,19 @@ require.config({
     skipDataMain: true,
     baseUrl: '//jbatch.iomash.com/1/',
     paths: {
-        jquery: '//cdn.jsdelivr.net/jquery/2.1.3/jquery.min'
+        jquery: '//cdn.jsdelivr.net/jquery/2.1.3/jquery.min',
+        highcharts: '//cdn.jsdelivr.net/highcharts/4.1.4/highcharts'
+    },
+    shim: {
+        highcharts: {
+            deps: ['jquery'],
+            exports: 'Highcharts'
+        }
     }
 });
 
 require(['domready', 'jbatchParser'], function(domready, jbatchParser) {
-    
+
     domready(function() {
         var scripts = document.querySelectorAll('script[type="text/jbatch"]'), next = function(i) {
             var promise;
