@@ -75,8 +75,8 @@ define(['jquery', '//cdn.jsdelivr.net/web-animations/1.0.6/web-animations.min.js
                 ];
             } else {
                 keyframes = [
-                    {transform: 'rotate3d(0, 0, 1, 200deg)', opacity: '0', transformOrigin: 'center', offset: 1},
-                    {transform: 'none', opacity: '1', transformOrigin: 'center', offset: 0}
+                    {transform: 'none', opacity: '1', transformOrigin: 'center', offset: 0},
+                    {transform: 'rotate3d(0, 0, 1, 200deg)', opacity: '0', transformOrigin: 'center', offset: 1}
                 ];
             }
             var player = elem.animate(keyframes, {duration: duration, iterations: 1});
